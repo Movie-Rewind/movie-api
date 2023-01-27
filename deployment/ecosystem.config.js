@@ -4,7 +4,7 @@ module.exports = {
     script : "npm run start",
     instances: 1,
     env: {
-      PORT: 777
+      PORT: 999
     },
     increment_var : 'PORT',
   }]
