@@ -8,6 +8,9 @@
     "mocha": true 
   }, 
   "rules": { 
+    "new-cap": "warn",
+    "linebreak-style":"off",
+    "camelcase": "off",
     "no-console": "warn", 
     "no-use-before-define": "warn", 
     "no-unused-vars": "warn",

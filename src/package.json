@@ -16,14 +16,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@Movie-Rewind/core": "^1.0.3",
+    "@Movie-Rewind/core": "^1.0.5",
     "awilix": "^8.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
     "mongodb": "^4.13.0",
     "uuid": "^9.0.0",
-    "uuid-mongodb": "^2.5.3"
+    "uuid-mongodb": "^2.5.3",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.5.4",

@@ -7,10 +7,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(helmet());
+app.use(express.json());
 
 const internalRoutes = require('./infrastructure/http/internal-controller.js');
+const moviesRoutes = require('./infrastructure/http/movie-controller');
 
 app.use('/internal', internalRoutes);
+app.use('/api/v1/movies/', moviesRoutes);
 
 const signals = ['SIGTERM', 'SIGINT', 'SIGUSR1', 'SIGUSR2'];
 signals.map((signal) => process.on(signal, () => {
@@ -19,5 +22,5 @@ signals.map((signal) => process.on(signal, () => {
 }));
 
 app.listen(port, () => {
-	console.log(`Template api listening: [${port}]`);
+	console.log(`Movie API listening: [${port}]`);
 });
