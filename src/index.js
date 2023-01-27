@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(helmet());
+
 app.use(express.json());
 
 const internalRoutes = require('./infrastructure/http/internal-controller.js');
