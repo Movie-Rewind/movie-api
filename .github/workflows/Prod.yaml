@@ -33,4 +33,4 @@ jobs:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: cd ${{ secrets.PROJECT_PATH }} && git fetch && git pull && cd ./src && echo "${{secrets.NPMRC}}"" > .npmrc && npm i && pm2 restart all && sudo systemctl restart nginx
+        script: cd ${{ secrets.PROJECT_PATH }} && git fetch && git pull && cd ./src && echo "${{secrets.NPMRC}}" > .npmrc && npm i && pm2 restart all && sudo systemctl restart nginx
