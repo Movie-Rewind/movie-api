@@ -26,6 +26,12 @@ jobs:
       run: cd src && npm run lint
     - name: run tests
       run: cd src && npm run test
+    - uses: fdev/envsub-action@v1
+      with:
+        templateFile: ./src/.env.example
+        outputFile: ./src/.env
+      env:
+        MONGO_URI: ${{ secrets.MONGO_URI }}
     - uses: actions/checkout@v1
     - name: deploy
       uses: appleboy/ssh-action@master
